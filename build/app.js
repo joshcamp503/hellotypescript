@@ -1,8 +1,9 @@
 "use strict";
-const world = 'typescript';
+const world = 'type';
 function hello(who = world) {
     return `Hello, ${who}! `;
 }
-const message = hello(world);
-const body = document.querySelector('body');
-body.textContent = message;
+console.log(hello(world));
+// const message = hello(world);
+// const body = document.querySelector('body');
+// body.textContent = message;

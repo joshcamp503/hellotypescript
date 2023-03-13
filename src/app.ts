@@ -1,10 +1,12 @@
-const world = 'typescript';
+const world = 'type';
 
 function hello(who: string = world): string {
   return `Hello, ${who}! `;
 }
 
-const message = hello(world);
+console.log(hello(world))
 
-const body = document.querySelector('body');
-body.textContent = message;
+// const message = hello(world);
+
+// const body = document.querySelector('body');
+// body.textContent = message;
