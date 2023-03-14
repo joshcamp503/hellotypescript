@@ -119,4 +119,16 @@ const addSum = add(2, 3)
 console.log(addSum)
 
 // Classes
+class Person {
+  id: number
+  name: string
+
+  constructor(id: number, name: string) {
+    this.id = id
+    this.name = name
+  }
+}
+
+const josh = new Person(1, 'Josh Camp')
+console.log(josh)
 // Typescript Crash Course - Traversy Media (34:17)
