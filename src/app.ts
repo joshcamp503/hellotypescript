@@ -119,7 +119,15 @@ const addSum = add(2, 3)
 console.log(addSum)
 
 // Classes
-class Person {
+interface PersonInterface {
+  id: number
+  name: string
+  register(): string
+}
+
+class Person implements PersonInterface {
+  // private id: number
+  // protected id: number
   id: number
   name: string
 
@@ -127,8 +135,29 @@ class Person {
     this.id = id
     this.name = name
   }
+
+  register() {
+    return `${this.name} is now registered`
+  }
 }
 
 const josh = new Person(1, 'Josh Camp')
-console.log(josh)
+
+// josh.id = 5
+
+console.log(josh.register())
+
+class Employee extends Person {
+  position: string
+
+  constructor(id: number, name: string, position: string) {
+    super(id, name)
+    this.position = position
+  }
+}
+
+const emp = new Employee(3, 'Shawn', 'Developer')
+
+console.log(emp.position)
+
 // Typescript Crash Course - Traversy Media (34:17)
