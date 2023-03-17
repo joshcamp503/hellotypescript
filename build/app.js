@@ -93,4 +93,10 @@ class Employee extends Person {
 }
 const emp = new Employee(3, 'Shawn', 'Developer');
 console.log(emp.position);
-// Typescript Crash Course - Traversy Media (34:17)
+// GENERICS
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['josh', 'max', 'corey']);
+strArray.push('hello');
